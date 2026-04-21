@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<robot name="ground">
+  <link name="ground">
+    <visual>
+      <origin xyz="0 0 -5"/>
+      <geometry>
+        <box size="100 100 10"/>
+      </geometry>
+      <material name="desert_sand">
+      	<color rgba="0.9297 0.7930 0.6758 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -5"/>
+      <geometry>
+        <box size="100 100 10"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="weld" type="fixed">
+    <parent link="world" />
+    <child link="ground" />
+  </joint>
+  
+</robot>
